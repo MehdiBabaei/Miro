@@ -1,0 +1,92 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+main {
+  display: flex;
+  flex-direction: column;
+}
+.section-1 {
+  @include container;
+  display: flex;
+  min-width: 100%;
+  &__box {
+    @include header-flex;
+    margin: auto auto;
+    gap: 35px;
+    margin-top: 90px;
+    .header {
+      @include rating;
+      flex-direction: column;
+      width: 440px;
+      height: 470px;
+      &--title {
+        h1 {
+          font-weight: 700;
+          color: $header-title;
+        }
+      }
+      &--paragraph {
+        opacity: 0.72;
+      }
+      &--signUp {
+        @include rating;
+        flex-direction: column;
+        width: 100%;
+        &--input {
+          input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 16px 24px;
+            border-radius: 30px;
+            border: 1px solid $input-text;
+            font-size: 18px;
+            &:focus {
+              box-shadow: 0px 0px 0px 4px $box-shadow-color-head;
+            }
+            &::placeholder {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      &--small {
+        margin: 8px 0px 40px;
+        small {
+          color: $blackLight;
+          opacity: 0.4;
+        }
+      }
+      &--socials {
+        @include rating;
+        background-color: $background-color-social;
+        border-radius: 10px;
+        padding: 14px;
+        width: 350px;
+        gap: 15px;
+        &--rating {
+          @include rating;
+          flex-direction: column;
+          &--svg {
+            @include rating;
+            width: 105px;
+            gap: 7px;
+          }
+          &--span {
+            small {
+              font-size: 11px;
+            }
+          }
+        }
+        &--icon {
+          @include rating;
+          gap: 15px;
+        }
+      }
+    }
+    img {
+      flex-grow: 0;
+      flex-shrink: 1;
+      display: flex;
+      width: 640px;
+    }
+  }
+}

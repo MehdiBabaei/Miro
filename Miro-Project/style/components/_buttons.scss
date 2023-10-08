@@ -1,0 +1,52 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+.btn {
+  @include label;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  &:hover {
+    color: $blue-btn;
+    fill: $blue-btn;
+  }
+  &--primary {
+    @include header-flex;
+    @include primary-btn;
+    width: 100%;
+    border-radius: 30px;
+    padding: 16px 16px;
+    &:hover {
+      background-color: $primary300;
+      color: $white;
+    }
+  }
+  label {
+    cursor: pointer;
+    font-size: 16px;
+    height: 20px;
+  }
+  &--svg {
+    @include flex;
+    svg {
+      width: 30px;
+      padding-right: 10px;
+    }
+  }
+  &--components {
+    text-decoration: none;
+    p {
+      color: $header-title;
+      line-height: 16px;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 13px 17px;
+      border-radius: 24px;
+      margin-right: 8px;
+      white-space: nowrap;
+      border: 1px solid $border-color;
+      opacity: 0.8;
+      &:focus {
+        background-color: $hover-buttom;
+      }
+    }
+  }
+}

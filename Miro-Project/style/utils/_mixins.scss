@@ -1,0 +1,31 @@
+@import "../utils/variables";
+
+@mixin container {
+  padding-bottom: 60px;
+  padding-top: 60px;
+  width: 100%;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+@mixin header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin rating {
+  display: flex;
+  align-items: normal;
+  justify-content: start;
+}
+@mixin label {
+  font-size: 18px;
+  background-color: inherit;
+  border: none;
+}
+@mixin primary-btn {
+  background-color: $blue-btn;
+  color: $white;
+}
